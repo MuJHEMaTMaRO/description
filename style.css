@@ -110,3 +110,20 @@ body{
     border-radius: 30px;
 }
 
+#main3{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main3 h1{
+    font-size: 150px;
+    color: white;
+    overflow: hidden;
+}
+
+h1 span{
+    display: inline-block;
+}

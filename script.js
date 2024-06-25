@@ -54,6 +54,7 @@ image.addEventListener("mouseleave", function(dets){
     })
 })
 
+function main2(){
 
 var open = document.querySelector("#nav i")
 var close = document.querySelector("#full i")
@@ -86,4 +87,46 @@ close.addEventListener("click", function(){
     tl.reverse()
 })
 
+}
+
+main2()
+
+function breakTheText() {
+var h1 = document.querySelector("#main3 h1")
+var h1Text = h1.textContent
+
+var splittedText = h1Text.split("")
+
+var clutter = ""
+var halfvalue = Math.floor(splittedText.length)/2
+
+console.log(halfvalue)
+
+splittedText.forEach(function(elem,idx){
+    if(idx<halfvalue) {
+        clutter += `<span class="a">${elem}</span>`
+    }
+    else{
+        clutter += `<span class="b">${elem}</span>`
+    }
+})
+
+h1.innerHTML = clutter
+}
+
+breakTheText()
+
+gsap.from("h1 .a", {
+    y:200,
+    duration: 0.4,
+    stagger:0.1,
+    delay:0.5
+})
+
+gsap.from("h1 .b", {
+    y:200,
+    duration: 0.4,
+    stagger:-0.1,
+    delay:0.5
+})
 
